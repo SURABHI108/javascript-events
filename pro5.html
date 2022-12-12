@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>onkeyup event</title>
+</head>
+<script>
+	function myFunc(){
+		let x = document.getElementById("fname");
+		x.value = x.value.toUpperCase();
+	}
+</script>
+<body>
+	<form>
+		Enter your Name: <input type= "text" name="name" id = "fname" onkeyup="myFunc()"/>
+	</form>
+</body>
+</html>

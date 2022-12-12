@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>image map</title>
+<script type="text/javascript">
+
+	        var image=null;
+		var animate;
+		function init()
+		{
+			image=document.getElementById('logo');
+			image.style.position='relative';
+			image.style.left='0px';
+			//clearTimeout(an);
+		}																		
+	
+function moveright()
+{
+
+	image.style.left=parseInt(image.style.left)+10+'px';
+	animate = setTimeout(moveright,500);
+}
+function moveleft()
+{
+
+	image.style.left=parseInt(image.style.left)+(-10)+'px';
+	animate = setTimeout(moveleft,500);
+}
+function stop()
+{
+
+	clearTimeout(animate);
+	
+}
+	window.onload=init;
+</script>
+</head>
+<body>
+	<img id = "logo" src = "car.jpg" height="200px" width="200px">
+		<br><br><br><br>
+		<input type="button" value="Left" onclick="moveleft();" />
+		<input type="button" value="Stop" onclick="stop();" />
+		<input type="button" value="Right" onclick="moveright();" />
+		<!--input type="button" value="Reset" onclick="init();"-->
+	
+</body>
+</html>
